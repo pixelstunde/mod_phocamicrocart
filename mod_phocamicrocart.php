@@ -42,7 +42,7 @@ if ($p['load_component_media'] == 1)
 
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
-$labelCSS        = $params->get('labelCss', 0);
+$labelCss        = $params->get('labelCss', 0);
 $menuItem        = $params->get('menuItem', 0);
 $link            = '/';
 
