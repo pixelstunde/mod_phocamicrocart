@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 $doc = JFactory::getDocument();
 
 $doc->addStyleDeclaration(
-        '
+	'
         .phocamicrocart{
             position: relative;
         }
@@ -41,3 +41,18 @@ $doc->addStyleDeclaration(
         </span>
     </i>
 </a>
+
+<?php if ($enableAjax): ?>
+    <script>
+        const updateCart = setInterval(function () {
+                var itemCount;
+                jQuery.getJSON("/?option=com_ajax&module=phocamicrocart&method=getItemCount&format=json", function (data) {
+                    if (data.success) {
+                        jQuery('.phocamicrocart .label').text(data.data);
+                    }
+                });
+            }
+            , 3000);
+    </script>
+
+<?php endif; ?>

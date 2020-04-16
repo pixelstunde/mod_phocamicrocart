@@ -28,6 +28,7 @@
 			<fieldset name="basic">
 				<field name="menuItem" type="menuitem" label="Select a menu item" description="" />
 				<field name="labelCss" type="color" label="Label CSS color" description="" />
+				<field name="enableAjax" default="true" type="checkbox" label="Enable Ajax" description="" />
 			</fieldset>
 			<fieldset
 					name="advanced">
