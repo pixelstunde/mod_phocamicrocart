@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="site" method="upgrade">
+	<name>Phoca Micro Cart</name>
+	<creationDate>16.04.2020</creationDate>
+	<author>Christian Friedemann</author>
+	<authorEmail>c.friedemann@pixelstun.de</authorEmail>
+	<authorUrl>https://pixelstun.de</authorUrl>
+	<copyright>pixelstun.de</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>Displays a cart link with current item count</description>
+
+	<files>
+		<filename module="mod_phocamicrocart">mod_phocamicrocart.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename>mod_phocamicrocart.xml</filename>
+	</files>
+
+	<!-- Update servers -->
+	<updateservers>
+		<!--		not implemented yet		-->
+		<server type="extension" priority="1" name="phocamicrocart">https://www.pixelstun.de/extensions/mod_phocamicrocart.xml</server>
+	</updateservers>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="menuItem" type="menuitem" label="Select a menu item" description="" />
+				<field name="labelCss" type="color" label="Label CSS color" description="" />
+			</fieldset>
+			<fieldset
+					name="advanced">
+				<field
+						name="moduleclass_sfx"
+						type="text"
+						label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+						description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
