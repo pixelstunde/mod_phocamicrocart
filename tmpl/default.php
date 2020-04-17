@@ -54,5 +54,4 @@ $doc->addStyleDeclaration(
             }
             , 3000);
     </script>
-
 <?php endif; ?>
