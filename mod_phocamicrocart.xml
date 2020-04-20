@@ -12,6 +12,7 @@
 
 	<files>
 		<filename module="mod_phocamicrocart">mod_phocamicrocart.php</filename>
+		<filename>helper.php</filename>
 		<folder>tmpl</folder>
 		<folder>language</folder>
 		<filename>mod_phocamicrocart.xml</filename>
