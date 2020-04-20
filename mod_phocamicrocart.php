@@ -29,22 +29,19 @@ $lang = JFactory::getLanguage();
 //$lang->load('com_phocacart.sys');
 $lang->load('com_phocacart');
 
-$app  = JFactory::getApplication();
+$app = JFactory::getApplication();
 
 
 $media = PhocacartRenderMedia::getInstance('main');
-if ($p['load_component_media'] == 1)
-{
-	$media->loadBase();
-	$media->loadBootstrap();
-	$media->loadSpec();
-}
 
+$media->loadBase();
+$media->loadBootstrap();
+$media->loadSpec();
 
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 $labelCss        = $params->get('labelCss', 0);
 $menuItem        = $params->get('menuItem', 0);
-$enableAjax        = $params->get('enableAjax', 0);
+$enableAjax      = $params->get('enableAjax', 0);
 $link            = '/';
 
 if ($menuItem != 0)
